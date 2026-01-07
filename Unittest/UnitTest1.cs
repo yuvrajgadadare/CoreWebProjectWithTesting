@@ -46,10 +46,10 @@ namespace Unittest
         //}
         [Theory]
         [InlineData("Maharashtra")]
-        [InlineData("Jammu")]
+        [InlineData("Panjab")]
         [InlineData("Kerala")]
         [InlineData("Karnataka")]
-        [InlineData("UP")]
+        [InlineData("Rajasthan")]
         public async Task TestForStates(string state_name)
         {
             //Arragne

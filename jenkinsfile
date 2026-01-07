@@ -27,27 +27,7 @@ pipeline {
                 }
             }
         }
-stage('Deploy to Local IIS') {
-            steps {
-                script {
-                    // Define the local IIS physical path
-                    def iisPath = 'C:\\inetpub\\wwwroot\\YourAppName'
-                    
-                    // Stop the IIS application pool/site to prevent file lock errors during deployment
-                    // The 'appcmd' utility can be used for IIS management
-                    bat "appcmd stop apppool /apppool.name:\"MyAppPool\""
-                    
-                    // Copy the published files to the IIS directory
-                    // 'xcopy' is a standard Windows command for copying files
-                    bat "xcopy /s /y \"${WORKSPACE}\\publish_output\\*\" \"${iisPath}\""
-                    
-                    // Start the IIS application pool/site
-                    bat "appcmd start apppool /apppool.name:\"MyAppPool\""
-                    
-                    echo "Deployment to local IIS complete."
-                }
-            }
-        }
+ 
     }
     post {
         success {
