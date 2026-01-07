@@ -49,7 +49,7 @@ namespace Unittest
         [InlineData("Panjab")]
         [InlineData("Kerala")]
         [InlineData("Karnataka")]
-        [InlineData("Rajasthan")]
+        [InlineData("Nagpur")]
         public async Task TestForStates(string state_name)
         {
             //Arragne
