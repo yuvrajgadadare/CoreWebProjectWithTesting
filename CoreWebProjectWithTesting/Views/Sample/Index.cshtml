@@ -1,0 +1,28 @@
+﻿@model IEnumerable<State>
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <h4>States</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>State Id</th>
+                        <th>State Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.StateId</td>
+                            <td>@item.StateName</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
